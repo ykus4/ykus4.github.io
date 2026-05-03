@@ -1,17 +1,32 @@
-const graph = document.getElementById('graph');
-const weeks = 53;
-const levels = [0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 3, 4];
+const GITHUB_USER = 'ykus4';
+const TOOL_REPOS = ['fuin', 'memdroid', 'enma'];
 
-for (let w = 0; w < weeks; w++) {
-  const col = document.createElement('div');
-  col.className = 'graph-col';
-  for (let d = 0; d < 7; d++) {
-    const cell = document.createElement('div');
-    cell.className = 'graph-cell';
-    if (Math.random() > 0.35) {
-      cell.dataset.level = levels[Math.floor(Math.random() * levels.length)];
-    }
-    col.appendChild(cell);
-  }
-  graph.appendChild(col);
+async function fetchGitHubUser() {
+  const res = await fetch(`https://api.github.com/users/${GITHUB_USER}`);
+  if (!res.ok) return;
+  const data = await res.json();
+  document.getElementById('stat-repos').textContent = data.public_repos;
+  document.getElementById('stat-followers').textContent = data.followers;
 }
+
+async function fetchRepoStars() {
+  const results = await Promise.all(
+    TOOL_REPOS.map(repo =>
+      fetch(`https://api.github.com/repos/${GITHUB_USER}/${repo}`)
+        .then(r => r.ok ? r.json() : null)
+    )
+  );
+
+  let totalStars = 0;
+  results.forEach((data, i) => {
+    if (!data) return;
+    totalStars += data.stargazers_count;
+    const el = document.getElementById(`stars-${TOOL_REPOS[i]}`);
+    if (el) el.textContent = `★ ${data.stargazers_count}`;
+  });
+
+  document.getElementById('stat-stars').textContent = totalStars;
+}
+
+fetchGitHubUser();
+fetchRepoStars();

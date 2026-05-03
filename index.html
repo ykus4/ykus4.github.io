@@ -86,20 +86,16 @@
     <div class="section-title">Stats</div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">12</div>
-        <div class="stat-label">CVEs</div>
+        <div class="stat-number" id="stat-repos">–</div>
+        <div class="stat-label">Repositories</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">8</div>
-        <div class="stat-label">Papers</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">24</div>
-        <div class="stat-label">Tools Released</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">3.1k</div>
+        <div class="stat-number" id="stat-stars">–</div>
         <div class="stat-label">Stars earned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-followers">–</div>
+        <div class="stat-label">Followers</div>
       </div>
     </div>
   </div>
@@ -122,11 +118,34 @@
     </div>
   </div>
 
-  <!-- Contribution Graph -->
+  <!-- Tools -->
   <div class="section">
-    <div class="section-title">Activity</div>
-    <div class="contrib-graph">
-      <div class="graph-grid" id="graph"></div>
+    <div class="section-title">Tools</div>
+    <div class="repos-grid">
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/fuin" target="_blank">🔧 fuin</a>
+        <div class="repo-desc">Web-based Android DEX packer.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
+          <span id="stars-fuin">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/memdroid" target="_blank">🔧 memdroid</a>
+        <div class="repo-desc">ADB-based memory modification tool for rooted Android devices.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#00add8"></span>Go</span>
+          <span id="stars-memdroid">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/enma" target="_blank">🔧 enma</a>
+        <div class="repo-desc">Frida-based Android Analyzer toolkit.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+          <span id="stars-enma">★ –</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -144,31 +163,11 @@
     </div>
   </div>
 
-  <!-- Tools -->
+  <!-- Contribution Graph -->
   <div class="section">
-    <div class="section-title">Tools</div>
-    <div class="repos-grid">
-      <div class="repo-card">
-        <a class="repo-name" href="https://github.com/ykus4/fuin" target="_blank">🔧 fuin</a>
-        <div class="repo-desc">Web-based Android DEX packer.</div>
-        <div class="repo-meta">
-          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
-        </div>
-      </div>
-      <div class="repo-card">
-        <a class="repo-name" href="https://github.com/ykus4/memdroid" target="_blank">🔧 memdroid</a>
-        <div class="repo-desc">ADB-based memory modification tool for rooted Android devices.</div>
-        <div class="repo-meta">
-          <span class="repo-lang"><span class="lang-dot" style="background:#00add8"></span>Go</span>
-        </div>
-      </div>
-      <div class="repo-card">
-        <a class="repo-name" href="https://github.com/ykus4/enma" target="_blank">🔧 enma</a>
-        <div class="repo-desc">Frida-based Android Analyzer toolkit.</div>
-        <div class="repo-meta">
-          <span class="repo-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
-        </div>
-      </div>
+    <div class="section-title">Activity</div>
+    <div class="contrib-graph">
+      <img src="https://ghchart.rshah.org/bc8cff/ykus4" alt="ykus4's GitHub contribution chart" style="width:100%;height:auto;" />
     </div>
   </div>
 

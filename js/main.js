@@ -1,4 +1,4 @@
-const GITHUB_USER = 'yoku';
+const GITHUB_USER = 'ykus4';
 const TOOL_REPOS = ['fuin', 'memdroid', 'enma'];
 
 async function fetchGitHubUser() {

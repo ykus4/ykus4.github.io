@@ -1,5 +1,5 @@
 const GITHUB_USER = 'ykus4';
-const TOOL_REPOS = ['fuin', 'memdroid', 'enma', 'shirayuki'];
+const TOOL_REPOS = ['fuin', 'memdroid', 'enma', 'shirayuki', 'kagura'];
 
 async function fetchGitHubUser() {
   const res = await fetch(`https://api.github.com/users/${GITHUB_USER}`);
